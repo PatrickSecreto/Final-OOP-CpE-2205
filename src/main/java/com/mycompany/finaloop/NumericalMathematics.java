@@ -4,4 +4,7 @@ import java.util.Scanner;
 
 public class NumericalMathematics {
     
+    public static void LessonsInNumMath(){
+        
+    }
 }

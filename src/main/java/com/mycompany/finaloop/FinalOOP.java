@@ -6,14 +6,13 @@ public class FinalOOP {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n");
+        System.out.println("WELCOME TO COMPUTER ENGINEERING 2ND SEMESTER STARTER PACK!\n\t");
+        System.out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n");
         int choice = 0;
         
-        System.out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n");
-        System.out.println("WELCOME TO COMPUTER ENGINEERING 2ND SEMESTER STARTER PACK!\n");
-        System.out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n");
-        
-        
-        while (choice != 4)
+        while (choice != 4){
             System.out.println("\nWhat subject do you want to learn?\n"
                     + "1. ECE\n"
                     + "2. Advanced Mathematics\n"
@@ -25,10 +24,26 @@ public class FinalOOP {
             
             switch (choice){
                 case 1:
-                    ECE e = new ECE();
+                    ECE ece = new ECE();
                     
-                    e.LessonsInECE();
+                    ece.LessonsInECE();
+                    break;
+                case 2:
+                    AdvancedMathematics am = new AdvancedMathematics();
+                    
+                    am.LessonsInAdvancedMath();
+                    break;
+                case 3:
+                    NumericalMathematics nm = new NumericalMathematics();
+                    
+                    nm.LessonsInNumMath();
+                    break;
+                case 4:
+                    break;
+                default:
+                    System.out.println("Invalid input. Please refer to the choices above.\n");
                     break;
             }
+        }
     }
 }

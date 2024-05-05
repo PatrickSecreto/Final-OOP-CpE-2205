@@ -6,11 +6,11 @@ public class BasicCircuitries {
 
     public static void ChoiceBasicCircuitries() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("\nWelcome to Circuits Dummies!\n");
+        System.out.println("\nWelcome to Basic Circuitries!");
         int choice = 0;
         
         while (choice != 4){
-            System.out.println("What do you want to learn today? \n"
+            System.out.println("\nWhat do you want to learn today? \n"
                     + "1. Circuitry Parts\n"
                     + "2. Parallel Circuits\n"
                     + "3. Series Circuits\n"

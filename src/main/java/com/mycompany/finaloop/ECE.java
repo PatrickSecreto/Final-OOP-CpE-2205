@@ -3,6 +3,7 @@ package com.mycompany.finaloop;
 import java.util.Scanner;
 
 public class ECE {
+    
     public static void LessonsInECE(){
         Scanner scanner = new Scanner(System.in);
         int choice = 0;
