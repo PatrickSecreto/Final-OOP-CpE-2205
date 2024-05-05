@@ -20,21 +20,15 @@ public class AdvancedMathematics {
             
             switch (choice){
                 case 1:
-                    AddingSubtractingMatrices am = new AddingSubtractingMatrices();
-                    
-                    am.ChoiceAddingSubtractingMatrices();
+                    ChoiceAddingSubtractingMatrices();
                     break;
                     
                 case 2:
-                    MultiplyingMatrices mm = new MultiplyingMatrices();
-                    
-                    mm.ChoicesMultiplyingMatrices();
+                    ChoicesMultiplyingMatrices();
                     break;
                     
                 case 3:
-                    DeterminantsOfMatrices dm = new DeterminantsOfMatrices();
-                    
-                    dm.ChoicesDeterminantsOfMatrices();
+                    ChoicesDeterminantsOfMatrices();
                     break;    
                     
                 case 4:
@@ -45,5 +39,20 @@ public class AdvancedMathematics {
                     break;
             }
         }
+    }
+    
+    
+    public static void ChoiceAddingSubtractingMatrices(){
+        
+    }
+    
+    
+    public static void ChoicesMultiplyingMatrices(){
+        
+    }
+    
+    
+    public static void ChoicesDeterminantsOfMatrices(){
+        
     }
 }
