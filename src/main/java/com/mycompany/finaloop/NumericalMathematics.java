@@ -20,21 +20,15 @@ public class NumericalMathematics {
             
             switch (choice){
                 case 1:
-                    ErrorComputation ec = new ErrorComputation();
-                    
-                    ec.ChoiceErrorComputation();
+                    ChoiceErrorComputation();
                     break;
                     
                 case 2:
-                    BracketingMethod bm = new BracketingMethod();
-                    
-                    bm.ChoicesBracketingMethod();
+                    ChoicesBracketingMethod();
                     break;
                     
                 case 3:
-                    OpenMethod om = new OpenMethod();
-                    
-                    om.ChoicesOpenMethod();
+                    ChoicesOpenMethod();
                     break;    
                     
                 case 4:
@@ -45,5 +39,20 @@ public class NumericalMathematics {
                     break;
             }
         }
+    }
+    
+    
+    public static void ChoiceErrorComputation(){
+        
+    }
+    
+    
+    public static void ChoicesBracketingMethod(){
+        
+    }
+    
+    
+    public static void ChoicesOpenMethod(){
+        
     }
 }
