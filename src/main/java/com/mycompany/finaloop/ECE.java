@@ -11,7 +11,7 @@ public class ECE {
         while (choice != 3){
             System.out.println("\nWhat lesson in ECE do you want to learn?\n"
                     + "1. Basic Circuitries\n"
-                    + "2. (dadagdagan pa)\n"
+                    + "2. Diode Application\n"
                     + "3. Exit");
 
             System.out.print("\nEnter your choice: ");
@@ -24,8 +24,11 @@ public class ECE {
                     bc.ChoiceBasicCircuitries();
                     break;
                     
-                // dadagdagan ng choice 2
+                case 2:
+                    DiodeApplication da = new DiodeApplication();
                     
+                    da.ChoicesDiodeApplication();
+                    break;
                     
                 case 3:
                     break;

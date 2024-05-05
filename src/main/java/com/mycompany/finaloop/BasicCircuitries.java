@@ -10,13 +10,13 @@ public class BasicCircuitries {
         int choice = 0;
         
         while (choice != 4){
-            System.out.println("\nWhat do you want to learn today? \n"
+            System.out.println("\nWhat do you want to learn from Basic Circuitries? \n"
                     + "1. Circuitry Parts\n"
                     + "2. Parallel Circuits\n"
                     + "3. Series Circuits\n"
-                    + "4. Quit\n");
+                    + "4. Quit");
 
-            System.out.print("Enter your choice: ");
+            System.out.print("\nEnter your choice: ");
             choice = scanner.nextInt();
             
             switch (choice){
