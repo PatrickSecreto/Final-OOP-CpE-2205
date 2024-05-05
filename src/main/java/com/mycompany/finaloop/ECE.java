@@ -36,7 +36,7 @@ public class ECE {
         }
     }
     
-    
+    // Basic Circuitries
     public static void ChoiceBasicCircuitries() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("\nWelcome to Basic Circuitries!");
@@ -468,7 +468,8 @@ public class ECE {
         }
     }
     
-    
+
+    // Diode Application
     public static void ChoicesDiodeApplication(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("\nWelcome to Diode Applications!");
@@ -489,10 +490,25 @@ public class ECE {
                     rectifierChoice();
                     break;
                 case 2:
-                    clipperChoice();
+                    System.out.println("""
+                                       
+                           Clippers have the ability to "clip" off a portion of the
+                           input signal without distorting the remaining part of the 
+                           alternating waveform. In this way, clippers can either 
+                           create a specific type of signal or to limit the voltage 
+                           that can be applied to a network.
+                           """);
                     break;
                 case 3:
-                    clamperDescChoice();
+                    System.out.println("""
+                                       
+                           Clampers is a network constructed of a diode, a resistor, 
+                           and a capacitor that shifts a waveform to a different dc
+                           level without changing the appearance of the applied signal.
+                           These are networks that "clamp" the input signal to a different
+                           dc level. the peak-to-peak swing of the applied signal will
+                           remain the same.
+                           """);
                     break;
                 case 4:
                     System.out.println("Exiting...");
@@ -505,15 +521,203 @@ public class ECE {
     }
     
     public static void rectifierChoice(){
+        Scanner scanner = new Scanner(System.in);
+        int choice = 0;
         
+        while (choice != 4){
+            System.out.println("\nWhat do you want to learn in rectifiers?:\n"
+                    + "1. Half Wave Rectifiers\n" 
+                    + "2. Full Wave Rectifiers\n" 
+                    + "3. Calculator\n"
+                    + "4. Exit");
+            
+            System.out.print("\nEnter your choice: ");
+            choice = scanner.nextInt(); 
+
+            switch (choice){
+                case 1:
+                    System.out.println("""
+                                       
+                                       A Half-wave rectifier produces an output voltage during one-half
+                                       (180 degrees) of the input ac signal. One half of the input signal
+                                       (negative half cycle) is removed to establsigh a dc voltage.""");
+                    
+                    System.out.println("""
+                                       
+                                       Formulas for Half Wave Rectifiers:
+                                       Vp = Vin - Vth
+                                       Vave = Vp/pi
+                                       PIV = Vin
+                                       
+                                       Where:
+                                       Vp = Peak Voltage
+                                       Vin = Input Voltage
+                                       Vth = Diode Threshold Voltage
+                                       Vave = Average Voltage
+                                       PIV = Peak Inverse Voltage
+                                       """);
+                    break;
+                    
+                case 2:
+                    System.out.println("""
+                                       
+                                       A Full Wave Rectifier produces an output voltage during the entire 
+                                       cycle (360 degrees) of the input ac signal, which means it uses both
+                                       cycle of the input signal for its outut""");
+                    
+                    System.out.println("""
+                                       
+                                       Formulas for Full Wave Rectifiers:
+                                       Vp = Vin - 2Vth
+                                       Vave = 2Vp/pi
+                                       PIV = Vin - Vth
+                                       
+                                       Where:
+                                       Vp = Peak Voltage
+                                       Vin = Input Voltage
+                                       Vth = Diode Threshold Voltage
+                                       Vave = Average Voltage
+                                       PIV = Peak Inverse Voltage
+                                       """);
+                    break;
+                    
+                case 3:
+                    rectifierCalculator();
+                    break;
+                    
+                case 4:
+                    break;
+                    
+                default:
+                    System.out.println("Invalid choice. Please select from the selection above.");
+            }
+        }
     }
     
-    public static void clipperChoice(){
+    public static void rectifierCalculator(){
+        Scanner scanner = new Scanner(System.in);
+        int choice = 0;
         
-    }
-    
-    public static void clamperDescChoice(){
-        
+        while (choice != 3){
+            System.out.println("\nRectifier: What do you want to compute?\n"
+                    + "1. Half Wave Rectifiers\n" 
+                    + "2. Full Wave Rectifiers\n" 
+                    + "3. Back");
+            
+            System.out.print("\nEnter your choice: ");
+            choice = scanner.nextInt();
+            
+            switch (choice){
+                // Half wave Rectifiers
+                case 1:
+                    int hwchoice = 0;
+                    while (hwchoice != 3){
+                        System.out.println("\nHalf Wave Rectifiers: Calculate for?\n"
+                                + "1. Peak Voltage\n"
+                                + "2. Average Voltage\n"
+                                + "3. Back");
+                        
+                        System.out.print("\nEnter your choice: ");
+                        hwchoice = scanner.nextInt();
+                        
+                        switch (hwchoice){
+                            case 1:
+                                System.out.print("\nEnter input Voltage: ");
+                                float Vin = scanner.nextFloat();
+                                
+                                System.out.print("\nEnter diode Threshold Voltage: : ");
+                                float Vth = scanner.nextFloat();
+                                
+                                float Vp = Vin - Vth;
+                                
+                                System.out.println("\nPeak Voltage: " + Vp);
+                                break;
+                                
+                            case 2:
+                                System.out.print("\nEnter Peak Voltage: ");
+                                float vp = scanner.nextFloat();
+                                
+                                float piApprox = 3.1415926535f;
+                                
+                                float Vave = vp / piApprox;
+                                
+                                System.out.println("\nAverage Voltage: " + Vave);
+                                break;
+                                
+                            case 3:
+                                break;
+                                
+                            default:
+                                System.out.println("Invalid choice. Please select from the selection above.");
+                                break;
+                                
+                        }
+                    }
+                    break;
+                  
+                // Full Wave Rectifiers
+                case 2:
+                    int fwchoice = 0;
+                    while (fwchoice != 4){
+                        System.out.println("\nFull Wave Rectifiers: Calculate for?\n"
+                                + "1. Peak Voltage\n"
+                                + "2. Average Voltage\n"
+                                + "3. Peak Inverse Voltage\n"
+                                + "4. Back");
+                        
+                        System.out.print("\nEnter your choice: ");
+                        fwchoice = scanner.nextInt();
+                        
+                        switch (fwchoice){
+                            case 1:
+                                System.out.print("\nEnter input Voltage: ");
+                                float Vin = scanner.nextFloat();
+                                
+                                System.out.print("\nEnter diode Threshold Voltage: : ");
+                                float Vth = scanner.nextFloat();
+                                
+                                float Vp = Vin - (2*Vth);
+                                
+                                System.out.println("\nPeak Voltage: " + Vp);
+                                break;
+                                
+                            case 2:
+                                System.out.print("\nEnter Peak Voltage: ");
+                                float vp = scanner.nextFloat();
+                                
+                                float piApprox = 3.1415926535f;
+                                
+                                float Vave = (2*vp) / piApprox;
+                                
+                                System.out.println("\nAverage Voltage: " + Vave);
+                                break;
+                                
+                            case 3:
+                                System.out.print("\nEnter input Voltage: ");
+                                float vin = scanner.nextFloat();
+                                
+                                System.out.print("\nEnter diode Threshold Voltage: : ");
+                                float vth = scanner.nextFloat();
+                                
+                                float PIV = vin - vth;
+                                System.out.println("Peak Inverse Voltage (PIV): " + PIV);
+                                break;
+                                
+                            case 4:
+                                break;
+                                
+                            default:
+                                System.out.println("Invalid choice. Please select from the selection above.");
+                                break;
+                                
+                        }
+                    }
+                    break;
+                    
+                default:
+                    System.out.println("Invalid choice. Please select from the selection above.");
+                    break;
+            }
+        }
     }
 }
-
