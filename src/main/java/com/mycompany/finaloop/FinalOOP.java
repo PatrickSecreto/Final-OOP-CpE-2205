@@ -7,9 +7,9 @@ public class FinalOOP {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
-        System.out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n");
-        System.out.println("WELCOME TO COMPUTER ENGINEERING 2ND SEMESTER STARTER PACK!\n\t");
-        System.out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n");
+        System.out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\n");
+        System.out.println("| WELCOME TO COMPUTER ENGINEERING 2ND SEMESTER STARTER PACK FOR MATHEMATICS SUBJECTS! |\n");
+        System.out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\n");
         int choice = 0;
         
         while (choice != 4){

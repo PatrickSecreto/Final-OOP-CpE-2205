@@ -12,7 +12,7 @@ public class ECE {
             System.out.println("\nWhat lesson in ECE do you want to learn?\n"
                     + "1. Basic Circuitries\n"
                     + "2. Diode Application\n"
-                    + "3. Exit");
+                    + "3. Back");
 
             System.out.print("\nEnter your choice: ");
             choice = scanner.nextInt();
@@ -28,7 +28,7 @@ public class ECE {
                     
                 case 3:
                     break;
-                
+                    
                 default:
                     System.out.println("Invalid input. Please refer to the choices above.\n");
                     break;
@@ -47,7 +47,7 @@ public class ECE {
                     + "1. Circuitry Parts\n"
                     + "2. Parallel Circuits\n"
                     + "3. Series Circuits\n"
-                    + "4. Quit");
+                    + "4. Back");
 
             System.out.print("\nEnter your choice: ");
             choice = scanner.nextInt();
@@ -56,15 +56,18 @@ public class ECE {
                 case 1:
                     circuitPartsChoice();
                     break;
+                    
                 case 2:
                     parallelDescChoice();
                     break;
+                    
                 case 3:
                     seriesDescChoice();
                     break;
+                    
                 case 4:
-                    System.out.println("Exiting...");
                     break;
+                    
                 default:
                     System.out.println("Invalid input. Please refer to the choices above.\n");
                     break;
@@ -76,43 +79,77 @@ public class ECE {
         Scanner scanner = new Scanner(System.in);
         int choice = 0;
         
-        while (choice != 7){
+        while (choice != 8){
             System.out.println("\nWhat part of circuits do you want to learn?:\n"
                     + "1. Breadboard \n" 
                     + "2. Resistors\n" 
                     + "3. Capacitors\n" 
                     + "4. Transistors (PNP, NPN)\n" 
                     + "5. Diodes (LED, Sensors, etc.)\n" 
-                    + "6. Jumper Wires\n" 
-                    + "7. Back");
+                    + "6. Jumper Wires\n"
+                    + "7. Inductors\n" 
+                    + "8. Back");
 
-            System.out.print("Enter your choice: ");
+            System.out.print("\nEnter your choice: ");
             choice = scanner.nextInt();
 
             switch (choice){
                 case 1:
-                    System.out.println("description abt breadboard");
+                    System.out.println("\nA breadboard is a solderless tool utilized for constructing \n"
+                                     + "and evaluating electronic circuits, offering a hassle-free means \n"
+                                     + "to prototype without soldering. Typically, it features a grid of \n"
+                                     + "interconnected holes into which components and wires can be inserted.");
                     break;
+                    
                 case 2:
-                    System.out.println("description abt resistors");
+                    System.out.println("\nResistors are electronic components designed to impede the flow of \n"
+                                     + "electric current within a circuit, measured in ohms (Ω).");
                     break;
+                    
                 case 3:
-                    System.out.println("description abt capacitors");
+                    System.out.println("\nCapacitors, on the other hand, store and discharge electrical \n"
+                                     + "energy, quantified in farads (F). ");
                     break;
+                    
                 case 4:
-                    System.out.println("description abt transistors");
+                    System.out.println("\nTransistors, semiconductor devices pivotal in electronics, \n"
+                                     + "serve to amplify or switch electronic signals and power, with \n"
+                                     + "PNP and NPN being the two primary types.  PNP transistors \n"
+                                     + "consist of an N-type semiconductor layer between two layers of \n"
+                                     + "P-type semiconductor, whereas NPN transistors feature a P-type \n"
+                                     + "layer sandwiched between two N-type layers, resulting in distinct \n"
+                                     + "operational behaviors depending on their configurations and biasing. \n"
+                                     + "These components play multifaceted roles in electronic circuits, \n"
+                                     + "capable of signal amplification, voltage regulation, and acting as switches.");
                     break;
+                    
                 case 5:
-                    System.out.println("description abt diodes");
+                    System.out.println("\nDiodes, semiconductor devices crucial in electronics, permit current \n"
+                                     + "to flow in only one direction, finding widespread use in rectification, \n"
+                                     + "signal demodulation, and voltage regulation. ");
                     break;
+                    
                 case 6:
-                    System.out.println("description abt jumper wires");
+                    System.out.println("\nJumper wires, flexible connectors used in electronic circuits, \n"
+                                     + "facilitate temporary electrical connections on breadboards or between \n"
+                                     + "components without soldering. They offer a convenient means to create \n"
+                                     + "connections across different points on a breadboard or circuit board, \n"
+                                     + "aiding in rapid circuit prototyping.");
                     break;
+                    
                 case 7:
-                    System.out.println("exiting...");
+                    System.out.println("\nInductors are electronic components that store energy in the form of \n"
+                                     + "a magnetic field when current passes through them, quantified in henries \n"
+                                     + "(H). As essential elements in electrical circuits, inductors are particularly \n"
+                                     + "useful in applications requiring energy storage, filtering, or inductive \n"
+                                     + "coupling. ");
+                    
+                case 8:
                     break;
+                    
                 default:
                     System.out.println("Invalid choice. Please select from the selection above.");
+                    break;
             }
         }
     }
@@ -120,45 +157,57 @@ public class ECE {
     public static void parallelDescChoice(){
         Scanner scanner = new Scanner(System.in);
         int choice = 0;
+        System.out.println("\nIn parallel circuits, components are linked across diverse pathways, ensuring that \n"
+                         + "each component receives the same voltage as the overall circuit. The total current \n"
+                         + "within a parallel circuit equals the aggregate of currents flowing through individual \n"
+                         + "components. Moreover, the total resistance in a parallel circuit is lower than that of \n"
+                         + "any individual component due to the combined pathways for current flow.");
         
+        System.out.println("\nCircuit design for Parallel Circuits:");
+        System.out.println(" ---------------------------------\n"
+                         + " |        |           |          |\n"
+                         + " |        |           |          |\n"
+                         + "___       |           |          |\n"
+                         + " _       { }         { }        { }\n"
+                         + "___      { }         { }        { }\n"
+                         + " _        |           |          |\n"
+                         + " |        |           |          |\n"
+                         + " |        |           |          |\n"
+                         + " ---------------------------------");
         while (choice != 5){
-            System.out.println("\nCircuit design for Parallel Circuits:");
-            System.out.println(" ---------------------------------\n"
-                             + " |        |           |          |\n"
-                             + " |        |           |          |\n"
-                             + "___       |           |          |\n"
-                             + " _       { }         { }        { }\n"
-                             + "___      { }         { }        { }\n"
-                             + " _        |           |          |\n"
-                             + " |        |           |          |\n"
-                             + " |        |           |          |\n"
-                             + " ---------------------------------");
-
             System.out.println("\nWhat do you want to learn about parallel circuits?\n"
                     + "1. How to calculate Voltage?\n" 
                     + "2. How to calculate Current?\n" 
                     + "3. How to calculate Resistance of each resistor?\n"
                     + "4. Calculator for Parallel Circuits\n"
                     + "5. Back");
+            
             System.out.print("\nEnter your choice: ");
             choice = scanner.nextInt();
 
             switch (choice){
                 case 1:
-                    System.out.println("Formula for voltage in parallel circuits:");
+                    System.out.println("\nFormula for voltage in parallel circuits:\n"
+                            + "Veq = V1 = V2 = V3 = …\n");
                     break;
+                    
                 case 2:
-                    System.out.println("Formula for current in parallel circuits:");
+                    System.out.println("\nFormula for current in parallel circuits:\n"
+                            + "I  = I1 + I2 + I3 + …\n");
                     break;
+                    
                 case 3:
-                    System.out.println("Formula for resistance in parallel circuits:");
+                    System.out.println("\nFormula for resistance in parallel circuits:\n"
+                            + "R = 1/R1 + 1/R2 + 1/R3 + …\n");
                     break;
+                    
                 case 4:
                     parallelCalculator();
                     break;
+                       
                 case 5:
-                    System.out.println("exiting...");
-                    break;
+                    break;    
+                    
                 default:
                     System.out.println("Invalid choice. Please select from the selection above.");
                     break;
@@ -176,7 +225,7 @@ public class ECE {
                     + "2. Voltage\n"
                     + "3. Current\n"
                     + "4. Back");
-            System.out.print("Enter your choice: ");
+            System.out.print("\nEnter your choice: ");
             choice = scanner.nextInt();
 
             switch (choice){
@@ -185,45 +234,46 @@ public class ECE {
                     System.out.println("\nParallel: What do you want to know the resistance of?\n"
                             + "1. Total Resistance (Req)\n"
                             + "2. Resistance of a specific resistor");
-                    
-                    System.out.print("Enter your choice: ");
+
+                    System.out.print("\nEnter your choice: ");
                     int rChoice = scanner.nextInt();
-                    
+
                     switch (rChoice){
                         case 1:
                             float totalResistance = 0f;
                             System.out.print("\nEnter the number of Resistors: ");
                             int numResistors = scanner.nextInt();
-                            
+
                             for (int i = 1; i < numResistors + 1; i++){
                                 System.out.print("Enter the resistance of Resistor " + i + ": ");
                                 float r = scanner.nextFloat();
-                                
+
                                 totalResistance += 1/r;
                             }
-                            
+
                             totalResistance = 1/totalResistance;
-                            
+
                             System.out.println("\nTotal Resistance: " + totalResistance + " ohms");
                             break;
-                            
+
                         case 2:
                             System.out.print("\nTotal Voltage (Veq): ");
                             float totalV = scanner.nextFloat();
-                            
+
                             System.out.print("Current in the specific resistor (I): ");
                             float currentOfResistor = scanner.nextFloat();
-                            
+
                             float resistanceOfResistor = totalV/currentOfResistor;
-                            
+
                             System.out.println("\nResistance of that specific resistor: " + resistanceOfResistor + " ohms");
                             break;
-                            
+
                         default:
                             System.out.println("Invalid choice. Please select from the selection above.");
                             break;
+                        
                     }
-                    break;
+                break;
                     
                 // Voltage    
                 case 2:
@@ -245,44 +295,44 @@ public class ECE {
                     System.out.println("\nParallel: What do you want to know the current of?\n"
                             + "1. Total Current (Ieq)\n"
                             + "2. Current of a specific resistor");
-                    
-                    System.out.print("Enter your choice: ");
+
+                    System.out.print("\nEnter your choice: ");
                     int iChoice = scanner.nextInt();
-                    
+
                     switch (iChoice){
                         case 1:
                             float totalC = 0f;
                             System.out.print("\nEnter the number of Resistors: ");
                             int numResistors = scanner.nextInt();
-                            
+
                             for (int i = 1; i < numResistors + 1; i++){
                                 System.out.print("Enter the current of Resistor " + i + ": ");
                                 float r = scanner.nextFloat();
-                                
+
                                 totalC += r;
                             }
                             System.out.println("\nTotal Current: " + totalC + " A");
                             break;
-                            
+
                         case 2:
                             System.out.print("\nTotal Voltage (Veq): ");
                             float totalV = scanner.nextFloat();
-                            
+
                             System.out.print("Resistance in the specific resistor (R): ");
                             float resistanceOfResistor = scanner.nextFloat();
-                            
+
                             float currentOfResistor = totalV/resistanceOfResistor;
-                            
+
                             System.out.println("\nCurrent of the specific resistor: " + currentOfResistor + " A");
                             break;
-                            
+
                         default:
                             System.out.println("Invalid choice. Please select from the selection above.");
                             break;
+                        
                     }
                     break;
                     
-                // Exit
                 case 4:
                     break;
                     
@@ -297,20 +347,25 @@ public class ECE {
     public static void seriesDescChoice(){
         Scanner scanner = new Scanner(System.in);
         int choice = 0;
+        System.out.println("\nIn a series circuit, components are interconnected in a singular pathway, ensuring \n"
+                         + "that identical current flows through each element. The total voltage across the \n"
+                         + "series circuit equals the cumulative sum of the individual voltages across each \n"
+                         + "component. Furthermore, the total resistance within a series circuit equates to the \n"
+                         + "sum of the resistances of all constituent components.");
+        
+        System.out.println("\nCircuit design for Series Circuits:");
+        System.out.println(" --------------{  }---------------\n"
+                         + " |                               |\n"
+                         + " |                               |\n"
+                         + "___                              |\n"
+                         + " _                              { }\n"
+                         + "___                             { }\n"
+                         + " _                               |\n"
+                         + " |                               |\n"
+                         + " |                               |\n"
+                         + " --------------{  }---------------");
         
         while (choice != 5){
-            System.out.println("\nCircuit design for Series Circuits:");
-            System.out.println(" --------------{  }---------------\n"
-                             + " |                               |\n"
-                             + " |                               |\n"
-                             + "___                              |\n"
-                             + " _                              { }\n"
-                             + "___                             { }\n"
-                             + " _                               |\n"
-                             + " |                               |\n"
-                             + " |                               |\n"
-                             + " --------------{  }---------------");
-
             System.out.println("\nWhat do you want to learn about series circuits?\n"
                     + "1. How to calculate Voltage?\n" 
                     + "2. How to calculate Current?\n" 
@@ -322,20 +377,27 @@ public class ECE {
 
             switch (choice){
                 case 1:
-                    System.out.println("Formula for voltage in series circuits:");
+                    System.out.println("\nFormula for voltage in series circuits:\n"
+                            + "V = V_1 + V_2 + V_3 + …\n");
                     break;
+                    
                 case 2:
-                    System.out.println("Formula for current in series circuits:");
+                    System.out.println("\nFormula for current in series circuits:\n"
+                            + "I = I1 = I2 = I3 =...\n");
                     break;
+                    
                 case 3:
-                    System.out.println("Formula for resistance in series circuits:");
+                    System.out.println("\nFormula for resistance in series circuits:\n"
+                            + "R = R_1 + R_2 + R_3 + ...\n");
                     break;
+                    
                 case 4:
                     seriesCalculator();
                     break;
+                    
                 case 5:
-                    System.out.println("exiting...");
                     break;
+                    
                 default:
                     System.out.println("Invalid choice. Please select from the selection above.");
                     break;
@@ -353,7 +415,7 @@ public class ECE {
                     + "2. Voltage\n"
                     + "3. Current\n"
                     + "4. Back");
-            System.out.print("Enter your choice: ");
+            System.out.print("\nEnter your choice: ");
             choice = scanner.nextInt();
 
             switch (choice){
@@ -363,7 +425,7 @@ public class ECE {
                             + "1. Total Resistance (Req)\n"
                             + "2. Resistance of a specific resistor");
                     
-                    System.out.print("Enter your choice: ");
+                    System.out.print("\nEnter your choice: ");
                     int rChoice = scanner.nextInt();
                     
                     switch (rChoice){
@@ -405,7 +467,7 @@ public class ECE {
                             + "1. Total Voltage (Veq)\n"
                             + "2. Voltage of a specific resistor");
                     
-                    System.out.print("Enter your choice: ");
+                    System.out.print("\nEnter your choice: ");
                     int vChoice = scanner.nextInt();
                     
                     switch (vChoice){
@@ -456,7 +518,6 @@ public class ECE {
                     System.out.println("\nTotal Current: " + totalCurrent + " A");
                     break;
                     
-                // Exit
                 case 4:
                     break;
                     
@@ -480,7 +541,7 @@ public class ECE {
                     + "1. Rectifiers\n"
                     + "2. Clippers\n"
                     + "3. Clampers\n"
-                    + "4. Quit");
+                    + "4. Back");
             
             System.out.print("\nEnter your choice: ");
             choice = scanner.nextInt();
@@ -489,6 +550,7 @@ public class ECE {
                 case 1:
                     rectifierChoice();
                     break;
+                    
                 case 2:
                     System.out.println("""
                                        
@@ -499,6 +561,7 @@ public class ECE {
                            that can be applied to a network.
                            """);
                     break;
+                    
                 case 3:
                     System.out.println("""
                                        
@@ -510,9 +573,10 @@ public class ECE {
                            remain the same.
                            """);
                     break;
+                    
                 case 4:
-                    System.out.println("Exiting...");
                     break;
+
                 default:
                     System.out.println("Invalid input. Please refer to the choices above.\n");
                     break;
@@ -529,7 +593,7 @@ public class ECE {
                     + "1. Half Wave Rectifiers\n" 
                     + "2. Full Wave Rectifiers\n" 
                     + "3. Calculator\n"
-                    + "4. Exit");
+                    + "4. Back");
             
             System.out.print("\nEnter your choice: ");
             choice = scanner.nextInt(); 
@@ -702,7 +766,7 @@ public class ECE {
                                 float PIV = vin - vth;
                                 System.out.println("Peak Inverse Voltage (PIV): " + PIV);
                                 break;
-                                
+                                   
                             case 4:
                                 break;
                                 
