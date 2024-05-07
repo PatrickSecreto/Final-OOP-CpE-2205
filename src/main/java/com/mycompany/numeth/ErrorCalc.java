@@ -4,7 +4,7 @@
 * @author eurek
 * ALL OKAY. CALLS FOR RELATIVE ERROR, APPROXIMATE & THE PERCENTAGES
 */
-package numeth;
+package com.mycompany.numeth;
 
 import java.util.Scanner;
 

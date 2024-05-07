@@ -1,8 +1,9 @@
-    package numeth;
+    package com.mycompany.numeth;
 
     /**
      *
      * @author eurek
+     * oki na
      */
 
     import java.util.Scanner;
@@ -10,6 +11,7 @@
     public class NewtonDivided {
 
         public static void NewtonMethod(Scanner input) {
+            // Calls for input from Interpolation.java
             Interpolation interpolation = new Interpolation();
             interpolation.InterpolationInput();
 
@@ -54,7 +56,8 @@
                 }
             }
 
-            // Calculate Newton's polynomial
+            // Calculate Newton's polynomial; does it by term
+            // for is dependent on the values
             double result = fx[0];
             double term = 1;
             for (int i = 1; i < n; i++) {

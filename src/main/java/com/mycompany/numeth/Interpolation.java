@@ -1,9 +1,10 @@
 
-package numeth;
+package com.mycompany.numeth;
 
 /**
  *
  * @author eurek
+ * File for managing input of interpolation; avoid repeating code between NewtonDivided & LagRange
  */
 
 import java.util.Scanner;

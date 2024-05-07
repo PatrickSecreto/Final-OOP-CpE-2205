@@ -1,8 +1,9 @@
-package numeth;
+package com.mycompany.numeth;
 
 /**
  *
  * @author eurek
+ * oki na
  */
 
 import java.util.Scanner;
@@ -10,6 +11,7 @@ import java.util.Scanner;
 public class LagRange {
 
     public static void LagRangeMethod(Scanner input) {
+        // Calls for the input from Interpolation.java
         Interpolation interpolation = new Interpolation();
         interpolation.InterpolationInput();
 

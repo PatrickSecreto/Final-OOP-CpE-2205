@@ -1,4 +1,4 @@
-package numeth;
+package com.mycompany.numeth;
 
 /**
  *

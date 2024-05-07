@@ -1,13 +1,10 @@
-package numeth;
+package com.mycompany.numeth;
 
 /*
  *
- * @author eurek
- * OK NA. NO EXTERNAL CLASS NEEDED
-*
+ * @author eurek 
+ * Add method for it to be reusable; input input, return Sigfigs (refer to error)
 */
-
-// SIGNIIFCANT FI,GURE COUNTER
 
 import java.util.Scanner;
 

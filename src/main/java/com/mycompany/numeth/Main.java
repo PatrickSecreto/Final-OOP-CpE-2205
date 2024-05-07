@@ -1,4 +1,4 @@
-package numeth;
+package com.mycompany.numeth;
 import java.util.Scanner;
 
 /**
@@ -15,7 +15,7 @@ public class Main {
         
         System.out.println("Choose an option:");
         System.out.println("1. Compute Errors");
-        System.out.println("2. Significant Figures");
+            System.out.println("2. Significant Figures");
         System.out.println("\n - BRACKETING METHODS -");
         System.out.println("3. Bisection Method");
         System.out.println("4 False Position Method");
