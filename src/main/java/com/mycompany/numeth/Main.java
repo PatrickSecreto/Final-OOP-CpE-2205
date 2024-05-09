@@ -15,10 +15,10 @@ public class Main {
         
         System.out.println("Choose an option:");
         System.out.println("1. Compute Errors");
-            System.out.println("2. Significant Figures");
+        System.out.println("2. Significant Figures");
         System.out.println("\n - BRACKETING METHODS -");
         System.out.println("3. Bisection Method");
-        System.out.println("4 False Position Method");
+        System.out.println("4. False Position Method");
         System.out.println("\n - INTERPOLATION METHODS -");
         System.out.println("5. Newton's Divided Difference (Linear, Quadratic, 3rd Degree Onwards)");
         System.out.println("6. LagRange Interpolation");

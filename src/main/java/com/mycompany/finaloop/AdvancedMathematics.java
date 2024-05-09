@@ -12,7 +12,7 @@ public class AdvancedMathematics {
             System.out.println("\nWhat lesson in Numerical Mathematics do you want to learn?\n"
                     + "1. Add, Subtract or Multiply Matrices\n"
                     + "2. Determinants of Matrices\n"
-                    + "3. Exit");
+                    + "3. Back");
 
             System.out.print("\nEnter your choice: ");
             choice = scanner.nextInt();

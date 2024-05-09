@@ -1,14 +1,15 @@
 package com.mycompany.finaloop;
 
 import java.util.Scanner;
+import com.mycompany.numeth.Main;
 
 public class FinalOOP {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
-        System.out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\n");
-        System.out.println("| WELCOME TO COMPUTER ENGINEERING 2ND SEMESTER STARTER PACK FOR MATHEMATICS SUBJECTS! |\n");
+        System.out.println("\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");
+        System.out.println("| WELCOME TO COMPUTER ENGINEERING 2ND SEMESTER STARTER PACK FOR MATHEMATICS SUBJECTS! |");
         System.out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\n");
         int choice = 0;
         
@@ -34,9 +35,9 @@ public class FinalOOP {
                     am.LessonsInAdvancedMath();
                     break;
                 case 3:
-                    NumericalMathematics nm = new NumericalMathematics();
+                    Main nm = new Main();
                     
-                    nm.LessonsInNumMath();
+                    nm.main(args);
                     break;
                 case 4:
                     break;

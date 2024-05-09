@@ -15,13 +15,17 @@ public class DeterminantMatrices {
                                |        DETERMINANT CALCULATOR       |
                                ---------------------------------------
                                """);
-            System.out.println("\nThe calculator can compute 1x1, 2x2, and 3x3 matrices!\n");
+            
+            System.out.println("The calculator can compute 1x1, 2x2, and 3x3 matrices!\n");
             rows = getValidInput("\nEnter number of rows for the Matrix: ", scanner);
             cols = getValidInput("Enter number of columns for the Matrix: ", scanner);
             if (rows != cols){
                 System.out.println("\nERROR: Rows and Columns must be same.");
             }else{
-                
+                if (rows >= 4 || cols >= 4){
+                System.out.println("\nERROR: Rows and Columns must be 1x1, 2x2, or 3x3 only.");
+                continue;
+                }
             break;
             }
         }
@@ -114,6 +118,7 @@ public class DeterminantMatrices {
                 
                 det = x-y+z;
                 return det;
+
         } 
         return det;
     }
